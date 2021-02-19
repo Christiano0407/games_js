@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(182, 182, 182);
+}
+.game {
+    width: 500px;
+    height: 400px;
+}
+
+.character {
+    width: 40px;
+    height: 70px;
+    background-image: url(../assets/buda.svg);
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
