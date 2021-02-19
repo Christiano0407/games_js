@@ -3,10 +3,19 @@
     height: 400px;
 }
 .character {
-    background-color: red;
+    background-color: red; 
     height: 70px;
     width: 40px;
     position: absolute;
     bottom: 0px;
     border-radius: 5px;
+    /* background-image: url(../assets/buda.svg); */
+}
+.character-sliding {
+    background-color: red;
+   /*  background-image: url(../assets/buda.svg); */
+    height: 40px;
+    width: 70px;
+    position: absolute;
+    bottom: 0px;
 }
