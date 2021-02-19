@@ -14,6 +14,8 @@ body {
 .character {
     width: 40px;
     height: 70px;
+    position: absolute;
+    bottom: 0px;
     background-image: url(../assets/buda.svg);
     background-size: cover;
     object-fit: cover;
