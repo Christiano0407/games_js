@@ -11,7 +11,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     let isGoingLeft = false;
     //Derecha 
     let isGoingRight = false;
-    let rightTimeId;
+    let rightTimerId;
 
     function jump() {
         //Not Jump
@@ -45,6 +45,13 @@ document.addEventListener(`DOMContentLoaded`, () => {
     }
      //Move to Left
     function slideLeft () {
+        prince.classList.add(`character`);
+        prince.classList.remove(`character-sliding`);
+
+        if(isGoingRight) {
+            clearInterval(rightTimerId)
+            isGoingRight = false
+        }
         
         isGoingLeft = true;
         leftTimeId = setInterval(function () {
@@ -54,25 +61,32 @@ document.addEventListener(`DOMContentLoaded`, () => {
         }, 20)
     }
      //Move to Right
-    function slideRight () {
+     function slideRight () {
+        prince.classList.add(`character-sliding`)
+        prince.classList.remove(`character`)
 
-        isGoingRight = true;
-        rightTimeId = setInterval(function () {
-            console.log(`Going to Right`);
-            left += 5
-            prince.style.left = left + `px`
-        }, 20) 
+        if(isGoingLeft) {
+            clearInterval(leftTimeId)
+            isGoingLeft = false
+        }
+
+        isGoingRight = true
+        rightTimerId = setInterval(function () {
+            console.log(`Go to Right`);
+            left +=5
+            prince.style.left = left +`px`
+        },20)
     }
     //Controls
 //Assing Controls 
-  function control(e) {
-      if(e.keyCode === 39) {
-        slideRight() // Move To right
-      }else if(e.keyCode === 38) {
-        jump() // If we press the up arrow
-      }else if(e.keyCode === 37) {
-        slideLeft() // If we press Left
-      }
-  }
+function control(e) {
+    if(e.keyCode === 39) {
+      slideRight() // Move To right
+    }else if(e.keyCode === 38) {
+      jump() // If we press the up arrow
+    }else if(e.keyCode === 37) {
+      slideLeft() // If we press Left
+    }
+}
   document.addEventListener(`keydown`, control);
 });

@@ -22,3 +22,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.character-sliding {
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    background-image: url(../assets/buda.svg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
