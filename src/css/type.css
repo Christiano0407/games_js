@@ -6,3 +6,16 @@
 html {
     font-size: 62.5%;
 }
+body {
+    background-color: darkgray;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin-top: 20rem;
+}
+
+#text {
+    border-right: solid white .4rem;
+    height: 3.5rem;
+}
