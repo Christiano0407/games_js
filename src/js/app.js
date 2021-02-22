@@ -23,23 +23,6 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
 
    /*  let doodlerBottomSpace = startPoint */
-
-
-    //Platform
-
-    //Doodler
-    function createDoodler() {
-        grid.appendChild(doodler)
-        doodler.classList.add('doodler')
-        doodlerLeftSpace = platforms[0].left
-        doodler.style.left = doodlerLeftSpace + 'px'
-        doodler.style.bottom = doodlerBottomSpace + 'px'
-      }
-    
-    
-
-    //Assing Function To KeyCodes
-
     //class Platform
     class Platform {
         constructor(newPlatBottom) {
@@ -65,6 +48,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
             console.log(platforms) 
         }
     } 
+
+    //Doodler
+    function createDoodler() {
+        grid.appendChild(doodler)
+        doodler.classList.add('doodler')
+        doodlerLeftSpace = platforms[0].left
+        doodler.style.left = doodlerLeftSpace + 'px'
+        doodler.style.bottom = doodlerBottomSpace + 'px'
+      }
 
     //MovePlatforms
     function movePlatforms() {
@@ -139,6 +131,11 @@ document.addEventListener(`DOMContentLoaded`, () => {
      function gameOver() {
          console.log(`Game Over`);
         isGameOver = true
+        while (grid.firstChild) {
+            console.log(`remove`)
+            grid.removeChild(grid.firstChild)
+        }
+        grid.innerHTML = score
         clearInterval(upTimerId)
         clearInterval(downTimerId)
     } 
@@ -150,6 +147,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             createDoodler()
             setInterval(movePlatforms, 30)
             jump(startPoint)
+            document.addEventListener(`keyup`, control)
         }
     }
     start()
