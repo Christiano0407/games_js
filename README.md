@@ -21,6 +21,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 # Doodle-Jump
 
 Doodle Jump clone in JavaScript, HTML and CSS
+[Ania_Kubow](https://www.youtube.com/watch?v=YSEsSs3hB6A&t=2100s)
+[Twitter](https://twitter.com/ania_kubow)
 ## MIT Licence
 Copyright (c) 2020 Ania Kubow
 
