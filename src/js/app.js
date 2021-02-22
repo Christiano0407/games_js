@@ -1,20 +1,24 @@
 //Todo el projecto se ejecuta en el DOM(HTML).
 document.addEventListener(`DOMContentLoaded`, () => {
 
-    const grid = document.querySelector(`.grid`);
-    const doodler = document.createElement(`div`);
-    let doodlerLeftSpace = 50
-    let doodlerBottomSpace = 150
-    let platforms = []
-    let isGameOver = false; 
+    const grid = document.querySelector('.grid')
+    const doodler = document.createElement('div')
+    let isGameOver = false
+    let speed = 3
     let platformCount = 5
-    //let doodlerLeftSpace = 50
+    let platforms = []
+    let score = 0
+    let doodlerLeftSpace = 50
     let startPoint = 150
-    //let doodlerBottomSpace = startPoint
-    let downTimerId
-    let upTimerId
-    let isJumping = true
+    let doodlerBottomSpace = startPoint
     const gravity = 0.9
+    let upTimerId
+    let downTimerId
+    let isJumping = true
+    let isGoingLeft = false
+    let isGoingRight = false
+    let leftTimerId
+    let rightTimerId
 
 
 
@@ -26,12 +30,13 @@ document.addEventListener(`DOMContentLoaded`, () => {
     //Doodler
     function createDoodler() {
         grid.appendChild(doodler)
-        doodler.classList.add(`doodler`)
-        //doodlerLeftSpace = platforms[0].left
-        doodler.style.left = doodlerLeftSpace + `px`
-        doodler.style.bottom = doodlerBottomSpace + `px`
-    }
-    createDoodler(); 
+        doodler.classList.add('doodler')
+        doodlerLeftSpace = platforms[0].left
+        doodler.style.left = doodlerLeftSpace + 'px'
+        doodler.style.bottom = doodlerBottomSpace + 'px'
+      }
+    
+    
 
     //Assing Function To KeyCodes
 
@@ -78,9 +83,12 @@ document.addEventListener(`DOMContentLoaded`, () => {
      isJumping = true
      upTimerId = setInterval(function() {
          console.log(startPoint);
-         doodlerBottomSpace +=20
+         console.log(`1`, doodlerBottomSpace)
+         doodlerBottomSpace += 20
          doodler.style.bottom = doodlerBottomSpace + `px`
-         if(doodlerBottomSpace > 350) {
+         console.log(`2`, doodlerBottomSpace)
+         console.log(`s`, startPoint)
+         if(doodlerBottomSpace > (startPoint + 200)) {
              fall()
              isJumping = false
          }
@@ -97,13 +105,40 @@ document.addEventListener(`DOMContentLoaded`, () => {
             if(doodlerBottomSpace <= 0) {
                 gameOver()
             }
+            platforms.forEach(platform => {
+                if(
+                    (doodlerBottomSpace >= platform.bottom) &&
+                    (doodlerBottomSpace <= (platform.bottom + 15)) &&
+                    ((doodlerBottomSpace + 60) >= platform.left) &&
+                    (doodlerBottomSpace <= (platform.left + 85)) &&
+                    !isJumping
+                ){
+                    console.log(`Jump!`)
+                    startPoint = doodlerBottomSpace
+                    jump()
+                    console.log(`start`, startPoint)
+                    isJumping = true
+                }
+            })
         },20)
     }
 
+    //Controls Assign function to KeyCode
+     function control(e) {
+        doodler.style.bottom = doodlerBottomSpace + `px`
+        if(e.key === `ArrowLeft`) {
+            //moveLeft()
+        }else if(e.key === `ArrowRight`) {
+            //moveRight()
+        }else if (e.key === `ArrowUp`) {
+            //moveStraight()
+        }
+    } 
+
     //Game
      function gameOver() {
+         console.log(`Game Over`);
         isGameOver = true
-
         clearInterval(upTimerId)
         clearInterval(downTimerId)
     } 
@@ -114,7 +149,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             createPlatforms()
             createDoodler()
             setInterval(movePlatforms, 30)
-            jump()
+            jump(startPoint)
         }
     }
     start()
