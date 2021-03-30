@@ -19,7 +19,7 @@ function miFunction() {
 
 miFunction();  */
 
-function activity(a, b) {
+/* function activity(a, b) {
   return a + b; 
 }
 console.log(activity(5, 10)); 
@@ -33,4 +33,14 @@ saludar(`Buen día`);
 function imprimirEdad(edad) {
   console.log(`Hola, mi edad es de ${edad} años`); 
 }
-imprimirEdad(29);
+imprimirEdad(29); */
+
+/* const double = x => x * 2
+
+console.log(double(8)); 
+
+const time = () => new Date().toLocaleTimeString(); 
+console.log(time()); 
+
+const isGreatThan = (value, comparison) => value > comparison
+console.log(isGreatThan(5, 8));  */
