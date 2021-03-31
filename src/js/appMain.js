@@ -44,3 +44,49 @@ console.log(time());
 
 const isGreatThan = (value, comparison) => value > comparison
 console.log(isGreatThan(5, 8));  */
+
+const family = ["Mau", "Pamme", "Luisa", "Alejandra", "Zadri"]; 
+console.log(family); 
+
+function brothers () {
+  if(family[0] === "Mau"){
+     console.log(`Yo soy ${family[0]}`)
+  }else {
+    console.log("No tenemos registro"); 
+  }
+}
+brothers();
+
+function help () {
+  let relacion = {
+    amiga: "Natasha",
+  }
+  
+  if(family[1] === "Pamme"){
+    console.log(`Ella es ${family[1]}, y ella es ${relacion.amiga} `)
+ }else {
+   console.log("No tenemos registro"); 
+ }
+
+}
+help(); 
+
+function printNumber() {
+  let number = 10; 
+
+  for(let i = 0; i < number; i++ ) {
+    setTimeout(() => {
+      console.log(i)
+    }, 100)
+  }
+}
+printNumber(); 
+
+const variable = () => {
+   let variables = {
+     var1: "Person1"
+   }
+   console.log(variables); 
+}
+
+variable(); 
