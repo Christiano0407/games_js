@@ -49,7 +49,7 @@ const family = ["Mau", "Pamme", "Luisa", "Alejandra", "Zadri"];
 console.log(family); 
 
 function brothers () {
-  if(family[0] === "Mau"){
+  if (family[0] === "Mau"){
      console.log(`Yo soy ${family[0]}`)
   }else {
     console.log("No tenemos registro"); 
@@ -62,7 +62,7 @@ function help () {
     amiga: "Natasha",
   }
   
-  if(family[1] === "Pamme"){
+  if (family[1] === "Pamme"){
     console.log(`Ella es ${family[1]}, y ella es ${relacion.amiga} `)
  }else {
    console.log("No tenemos registro"); 
@@ -74,7 +74,7 @@ help();
 function printNumber() {
   let number = 10; 
 
-  for(let i = 0; i < number; i++ ) {
+  for (let i = 0; i < number; i++ ) {
     setTimeout(() => {
       console.log(i)
     }, 100)
@@ -93,7 +93,7 @@ variable();
 
 let player = 5; 
 
-if(player === 5) {
+if (player === 5) {
   console.log(true); 
 }else {
   console.log("Es un valor negativo"); 
@@ -101,7 +101,7 @@ if(player === 5) {
 
 let game = 10; 
 
-if(game === 10 || game == number) {
+if (game === 10 || game == number) {
   console.log("Yes I am"); 
 }else {
   console.log("Por supuesto que no!"); 
@@ -109,8 +109,27 @@ if(game === 10 || game == number) {
 
 let shoes = "Nike"; 
 
-if(shoes != String && shoes === "Nike") {
+if (shoes != String && shoes === "Nike") {
   console.log("Yes, is it a Nike"); 
 }else {
   console.log("Not, I am sorry"); 
 }
+
+let natasha = {
+  name: "Natasha",
+  edad: 25,
+}
+let scarlett = {
+  name: "Scarlett", 
+  edad: 30,
+}
+
+if (natasha.edad >= scarlett.edad) {
+  console.log("Me veo más grande que tú"); 
+}else if (natasha.edad <= scarlett.edad) {
+  console.log("Oye, soy cinco años menor que tú"); 
+}else {
+  console.log("Lo siento por tu edad"); 
+}
+
+natasha.name == "Natasha" ? console.log("Sí, es ella.") :  console.log("Es equivocado el nombre"); 
