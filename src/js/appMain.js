@@ -90,3 +90,27 @@ const variable = () => {
 }
 
 variable(); 
+
+let player = 5; 
+
+if(player === 5) {
+  console.log(true); 
+}else {
+  console.log("Es un valor negativo"); 
+}
+
+let game = 10; 
+
+if(game === 10 || game == number) {
+  console.log("Yes I am"); 
+}else {
+  console.log("Por supuesto que no!"); 
+}
+
+let shoes = "Nike"; 
+
+if(shoes != String && shoes === "Nike") {
+  console.log("Yes, is it a Nike"); 
+}else {
+  console.log("Not, I am sorry"); 
+}
