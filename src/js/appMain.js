@@ -133,3 +133,34 @@ if (natasha.edad >= scarlett.edad) {
 }
 
 natasha.name == "Natasha" ? console.log("Sí, es ella.") :  console.log("Es equivocado el nombre"); 
+
+const userOne = {
+  name: "Luisa",
+  ronda: "Papel", 
+}
+const userTwo = {
+  name: "Alma", 
+  ronda: "Piedra", 
+}
+
+const optionOne = {
+  Option: "Piedra",
+}
+const optionTwo = {
+  option: "Papel", 
+}
+const optionThree = {
+  option: "Tijera", 
+}
+
+const games = () => {
+  if(userOne.ronda !== optionOne.option) {
+    console.log("Demonios! Perdí!"); 
+  }else if(userOne.ronda === optionOne.option) {
+    console.log("Es un empate!"); 
+  }else {
+    console.log("Ya no quiero jugar"); 
+  }
+}
+
+games(); 
