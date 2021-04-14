@@ -25,5 +25,9 @@ const primero = frutas.unshift("Uvas");
 console.log(frutas.length); 
 console.log(frutas); 
 
+//shift ( Eliminar el elemento que está al inicio)
+
+//indexOf( Agregar un elemento). 
+
 //
 
