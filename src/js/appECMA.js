@@ -73,13 +73,72 @@ console.log(name);
 /*  let = local */
 /*  const = fija */
 
-// Arrow Function Promesas y Parámetros
+// Arrow Function Promesas y Parámetros: 
 let names = "Nombres" ; 
 let ages = 32; 
 
 let obj2 = { names, ages };
 
 console.log(obj2);
+
+//MAP (methos):
+const friends = [
+  {name: `Luisa`, age: 30}, 
+  {name: `Alma`, age: 25},
+  {name: `Pamme`, age: 29, status: "soltera"}
+]
+let myFriends = friends.map(function(item) {
+    return item.status
+}); 
+console.log(myFriends);
+
+let myName = friends.map((items) => {
+   console.log(items.name); 
+}); 
+
+let myGirl = friends.map((girls) => {
+
+   console.log(girls.name); 
+
+  if(friends.name === "Luisa", "Alma", "Pamme") {
+    console.log("Ellas son mis amigas");
+  }else {
+    console.log("Lo siento, no me hablan"); 
+  }
+
+}); 
+/*  */
+/* const hola = () => { */
+/*    */
+/* } */
+/*  */
+
+// PROMESAS: 
+const helloPromise = () => {
+
+  return new Promise((resolve, reject) => {
+  
+    if(true) {
+       resolve(`Muy Bien`);  
+    }else {
+       reject(`Lo siento`); 
+    }
+  }); 
+
+}
+
+helloPromise()
+.then(response => console.log(response))
+.then(() => console.log(`Hello, Hey!`))
+.catch(error => console.log(error)); 
+
+
+// ARROW FUNCTION:
+
+/*  arrow = () => { */
+/*    */
+/*  } */
+
 
 // Clases and Módulos and Generadores
 
