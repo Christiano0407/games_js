@@ -63,6 +63,7 @@ let person = {
     country: `MX`
 }; 
 console.log(person.name, person.age, person.country);
+
 //2 ====Nueva Forma)
 let {name} = person;
 console.log(name);
@@ -73,7 +74,12 @@ console.log(name);
 /*  const = fija */
 
 // Arrow Function Promesas y Parámetros
+let names = "Nombres" ; 
+let ages = 32; 
 
+let obj2 = { names, ages };
+
+console.log(obj2);
 
 // Clases and Módulos and Generadores
 
