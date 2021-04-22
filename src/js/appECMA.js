@@ -1,6 +1,6 @@
 console.log("Start"); 
 
-// === ECMA-SCRIPT===
+//             === ECMA-SCRIPT===
 
 // === VAR (Global) ============
 // === LET (Local) =============
@@ -46,9 +46,31 @@ ndskjndsjkcndncjkdsncjknsd
 ldsnldsnlcndjlnjsncjsndjnds`; 
 console.log(text);
 
-//OPERATORS
+//OPERATORS (expandir varios elementos con un ARRAY y unir elementos).
+let teamMujeres = [`Luisa`, `Alma`, `Natalia`, `Diana`, `Alexa`, `Azucena`]; 
+
+let teamHombres = [`Chris`, `Ivan`, `Mau`, `Rodrigo`, `Marco`]; 
+
+let union = [`Pammela`, `Luis`, ...teamMujeres, ...teamHombres]; 
+
+console.log(union);
 
 // DESESTRUCTURACIÓN
+
+let person = {
+    name: `Oscar`, 
+    age : 32, 
+    country: `MX`
+}; 
+console.log(person.name, person.age, person.country);
+//2 ====Nueva Forma)
+let {name} = person;
+console.log(name);
+
+// SCOPE 
+/*  var = global */
+/*  let = local */
+/*  const = fija */
 
 // Arrow Function Promesas y Parámetros
 
