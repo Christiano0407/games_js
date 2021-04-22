@@ -132,7 +132,32 @@ helloPromise()
 .then(() => console.log(`Hello, Hey!`))
 .catch(error => console.log(error)); 
 
+//2) Example: Promesas
 
+const amigos = [ 
+  {amigo: "Mau", age: 29}, 
+  {amigo: "Pamme", age: 28}, 
+  {amigo: "Ale", age: 29}, 
+  {amigo: "Pao", age: 32}
+
+]; 
+
+const helloFriends = () => {
+
+  return new Promise((resolve, reject) => {
+   
+    if(amigos.amigo === "Mau", "Pamme", "Ale", "Pao") {
+    resolve(`Son mis amigos desde años. Los quiero`); 
+    }else {
+    reject(`No! Ellos ya no son mis amigos`)
+    }
+  }); 
+
+}
+
+helloFriends()
+.then(response => console.log(response))
+.catch(error => console.log(error)); 
 // ARROW FUNCTION:
 
 /*  arrow = () => { */
@@ -140,8 +165,45 @@ helloPromise()
 /*  } */
 
 
-// Clases and Módulos and Generadores
+// == Clases and Módulos and Generadores ==
+// CLASS - CONSTRUCTOR
 
+class calculator {
+
+  constructor() {
+    this.valueA = 0; 
+    this.valueB = 0; 
+  }
+  sum(valueA, valueB) {
+    this.valueA = valueA; 
+    this.valueB = valueB; 
+
+    return this.valueA + this.valueB; 
+  }
+
+}
+const calc = new calculator(); 
+console.log(calc.sum(5, 15)); 
+
+// 2) Class Example:
+
+class count {
+
+  constructor() {
+  this.countA = 0; 
+  this.countB = 0; 
+  }
+
+  sum(countA, countB) {
+    this.countA = countA; 
+    this.countB = countB; 
+   
+    return this.countA + this.countB; 
+  }
+}
+
+const counter = new count(); 
+console.log(counter.sum(80, 20)); 
 
 //          ====== ECM 7 ======
 
