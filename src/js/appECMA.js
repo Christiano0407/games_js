@@ -168,7 +168,7 @@ helloFriends()
 // == Clases and Módulos and Generadores ==
 // CLASS - CONSTRUCTOR
 
-class calculator {
+class Calculator {
 
   constructor() {
     this.valueA = 0; 
@@ -182,12 +182,12 @@ class calculator {
   }
 
 }
-const calc = new calculator(); 
+const calc = new Calculator(); 
 console.log(calc.sum(5, 15)); 
 
 // 2) Class Example:
 
-class count {
+class Count {
 
   constructor() {
   this.countA = 0; 
@@ -202,7 +202,7 @@ class count {
   }
 }
 
-const counter = new count(); 
+const counter = new Count(); 
 console.log(counter.sum(80, 20)); 
 
 
