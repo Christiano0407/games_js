@@ -207,9 +207,35 @@ console.log(counter.sum(80, 20));
 
 
 // IMPORT AND MODULES: Programación Orientada a Objetos.
-import { hello } from `../js/modules`; 
-hello(); 
+/* import { hello } from `../js/modules`;  */
+/* hello();  */
 
+/* const hello = require('../js/modules') */
+/* console.log(hello());  */
+
+/* import {hello} from `../js/modules`;  */
+/* import hello from `./modules`; */
+/*  */
+/* console.log(hello()); */
+
+/* import { hello } from `../js/module`;  */
+/* hello();  */
+
+// GENERADORES: Retorna según el algoritmo
+//.next / return / trow = fibonashi
+function* helloWorld() {
+  if(true) {
+    yield `hello, `; 
+  }
+
+  if(true) {
+    yield `world`;
+  }
+}
+
+const generatorsHello = helloWorld(); 
+console.log(generatorsHello.next().value);
+console.log(generatorsHello.next().value);
 
 //          ====== ECM 7 ======
 
