@@ -205,6 +205,12 @@ class count {
 const counter = new count(); 
 console.log(counter.sum(80, 20)); 
 
+
+// IMPORT AND MODULES: Programación Orientada a Objetos.
+import { hello } from `../js/modules`; 
+hello(); 
+
+
 //          ====== ECM 7 ======
 
 //          ======  ECM 8 =======
