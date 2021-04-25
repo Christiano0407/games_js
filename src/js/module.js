@@ -93,7 +93,7 @@ const helloWorld = () =>  {
     })
 }; 
 //2: 
-const helloAsync = async () => {
+    const helloAsync = async () => {
     const hello = await helloWorld(); 
 
     console.log(hello); 
@@ -112,6 +112,16 @@ const anotherFunction = async () => {
   }
 }
 anotherFunction(); 
+
+// ========= Practice Async =======
+const animals = {
+    animal1: `Mono`, 
+    animal2: `Jirafa`, 
+    animal3: `Rinoceronte`, 
+    animal4: `Pingüino`,
+}
+
+
 
 // ==== ECMA SCRIPT 9 =================
 
