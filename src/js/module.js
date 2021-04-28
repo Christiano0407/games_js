@@ -114,15 +114,110 @@ const anotherFunction = async () => {
 anotherFunction(); 
 
 // ========= Practice Async =======
-const animals = {
-    animal1: `Mono`, 
-    animal2: `Jirafa`, 
-    animal3: `Rinoceronte`, 
-    animal4: `Pingüino`,
+/* const animals = { */
+/*     animal1: `Mono`,  */
+/*     animal2: `Jirafa`,  */
+/*     animal3: `Rinoceronte`,  */
+/*     animal4: `Pingüino`, */
+/* } */
+const datos = [{
+  id: 1, 
+  title: "Iron Man", 
+  year: 2008
+}, {
+  id: 2, 
+  title: "Spiderman Homecoming", 
+  year: 2017
+}, {
+   id: 3, 
+   title: "Avengers: EnGame", 
+   year: 2019
+}, {
+    id: 4, 
+    title: "Black Widow", 
+    year: 2021
+}]
+
+const getDatos = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+         resolve(datos)
+        }, 1500)
+    })
 }
+ /* getDatos()
+ .then((datos) => console.log(datos));  */
+ /* .catch((err) => console.log(err));  */
 
+ /* ASYNC/AWAIT */
 
+async function fetchingData () {
+   const datosFetching = await getDatos(); 
+   console.log(datosFetching); 
+ }
 
+ fetchingData(); 
+// Two
+ const song = [{
+    id: 1, 
+    title: "Coldplay", 
+    year: 2000
+  }, {
+    id: 2, 
+    title: "Phil Collins",
+    year: 1990
+  }, {
+     id: 3, 
+     title: "Katy Perry", 
+     year: 2010
+  }, {
+      id: 4, 
+      title: "Dua Lupa", 
+      year: 2020
+  }, {
+      id: 5, 
+      title: "BeeGees", 
+      year: 1970
+  }]; 
+
+  const getSing = () => {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+              resolve(song); 
+          }, 2000); 
+      }); 
+  }
+
+  async function allSing() {
+      const band = await getSing(); 
+      console.log(band); 
+  }
+
+  allSing();
+
+  const refrescos = [{
+      id: 1, 
+      refresco: "Coca-Cola", 
+      color: "Red", 
+      costo: 20
+  }, {
+      id: 2,
+      refresco: "Seven-Up", 
+      color: "Green", 
+      costo: 15
+  }]; 
+  
+  const getRefrescos = () => {
+      return new Promise((resolve, reject) => {
+          resolve(refrescos); 
+      }); 
+  }
+
+  async function allRefrescos() {
+      const agua = await getRefrescos(); 
+      console.log(agua); 
+  }
+  allRefrescos();  
 // ==== ECMA SCRIPT 9 =================
 
 
