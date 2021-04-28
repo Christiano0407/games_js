@@ -102,7 +102,7 @@ const helloWorld = () =>  {
 //3: 
 helloAsync(); 
 
-// Otra forma de estructurar: try y catch: 
+// Otra forma de estructurar: TRY y CATCH: 
 const anotherFunction = async () => {
   try {
       const hello = await helloWorld();
@@ -209,17 +209,30 @@ async function fetchingData () {
   
   const getRefrescos = () => {
       return new Promise((resolve, reject) => {
-          resolve(refrescos); 
+          resolve(refrescos)
       }); 
   }
-
-  async function allRefrescos() {
-      const agua = await getRefrescos(); 
-      console.log(agua); 
+  const allRefrescos = async () =>  {
+      try {
+        const agua = await getRefrescos();
+        console.log(agua); 
+      }catch (error) {
+          console.log(error); 
+      }
   }
   allRefrescos();  
-// ==== ECMA SCRIPT 9 =================
+
+               // ==== ECMA SCRIPT 9 =================
+
+// Spread Operator: Oerador de reposo. 
 
 
+// Porpagation Properties
+
+
+// Promise Finally
+
+
+// Regex
 
 // ==== ECMA SCRIPT 10 =================
