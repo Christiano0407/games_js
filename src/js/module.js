@@ -236,3 +236,6 @@ async function fetchingData () {
 // Regex
 
 // ==== ECMA SCRIPT 10 =================
+
+
+                      
